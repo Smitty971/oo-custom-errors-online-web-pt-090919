@@ -9,7 +9,7 @@ class Person
     self.partner = person
     if person.class != Person
       raise PartnerError
-    else 
+    else
       person.parner = self
     end 
   end
@@ -22,7 +22,3 @@ end
 beyonce = Person.new("Beyonce")
 beyonce.get_married("Jay-Z")
 puts beyonce.name
-
-
-
-

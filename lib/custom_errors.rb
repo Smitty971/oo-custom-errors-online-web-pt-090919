@@ -11,10 +11,12 @@ class Person
       raise PartnerError
     else
       person.parner = self
-    end 
+    end
   end
 
   class ParnterError < StandardError
+    def message
+      "you must give the get_married method an argument of an instance of the person class!"
   end
 
 end

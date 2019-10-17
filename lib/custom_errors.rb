@@ -7,7 +7,14 @@ class Person
 
   def get_married(person)
     self.partner = person
-    person.partner = self
+    if person.class != Person
+      raise PartnerError
+    else 
+      person.parner = self
+    end 
+  end
+
+  class ParnterError < StandardError
   end
 
 end

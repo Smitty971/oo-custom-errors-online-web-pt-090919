@@ -10,20 +10,20 @@ class Person
     if person.class != Person
       begin
         raise PartnerError
-      rescue PartnerError => error
-          puts error.message
+      rescue ParnerError => error
+        puts error.message
       end
     else
-      person.partner = self
+      person.parner = self
     end
   end
 
-  class PartnerError < StandardError
+  class ParnterError < StandardError
     def message
       "you must give the get_married method an argument of an instance of the person class!"
     end
   end
-end
+
 
 beyonce = Person.new("Beyonce")
 beyonce.get_married("Jay-Z")
